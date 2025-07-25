@@ -1,6 +1,6 @@
 # Bank Marketing Prediction API
 
-An easy-to-use REST API to predict whether a customer will subscribe to a term deposit, based on the UCI Bank Marketing dataset and a trained Random Forest model. Powered by FastAPI.
+An easy-to-use REST API to predict whether a customer will subscribe to a term deposit, based on the UCI Bank Marketing dataset and a trained Random Forest model. Powered by FastAPI. This the week 2 project of my MLOps plan.
 
 # 🚀 Features
 /predict endpoint for model predictions
