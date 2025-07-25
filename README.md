@@ -1,8 +1,8 @@
-Bank Marketing Prediction API
+# Bank Marketing Prediction API
 
 An easy-to-use REST API to predict whether a customer will subscribe to a term deposit, based on the UCI Bank Marketing dataset and a trained Random Forest model. Powered by FastAPI.
 
-🚀 Features
+# 🚀 Features
 /predict endpoint for model predictions
 
 Input validation using Pydantic
@@ -13,7 +13,7 @@ Interactive API docs (/docs)
 
 Ready for local or cloud deployment
 
-🗂️ Project Structure
+# 🗂️ Project Structure
 
 .
 ├── main.py               # FastAPI app and inference logic
@@ -21,7 +21,7 @@ Ready for local or cloud deployment
 ├── requirements.txt      # Python dependencies
 └── README.md             # This documentation
 
-⚡ Quickstart
+# ⚡ Quickstart
 Clone this repo and move into the directory:
 
 git clone <your-repo-url>
@@ -46,7 +46,7 @@ API docs: http://127.0.0.1:8000/docs
 
 Health check: http://127.0.0.1:8000/
 
-🧑‍💻 Example Input (for /predict endpoint)
+# 🧑‍💻 Example Input (for /predict endpoint)
 
 {
   "age": 40,
@@ -66,7 +66,7 @@ Health check: http://127.0.0.1:8000/
   "poutcome": "unknown"
 }
 
-🟢 Example Output
+# 🟢 Example Output
 
 {
   "prediction": 0,
@@ -76,21 +76,21 @@ prediction: 1 = likely to subscribe, 0 = not likely.
 
 probability: Confidence scores for both classes.
 
-📦 API Endpoints
+# 📦 API Endpoints
 GET / — Health check
 
 POST /predict — Submit customer data to get a prediction
 
 GET /features — Model's expected feature columns
 
-⚠️ Input Feature Notes
+# ⚠️ Input Feature Notes
 Categorical fields must match model categories (see /features endpoint).
 
 Example jobs: "management", "technician", "services", etc.
 
 Example months: "may", "jul", "nov", etc.
 
-📝 Training & Model Info
+# 📝 Training & Model Info
 Model: RandomForestClassifier (scikit-learn)
 
 Data: UCI Bank Marketing Dataset
@@ -99,13 +99,13 @@ One-hot encoding for categorical variables
 
 duration feature not used
 
-☁️ Deployment
+# ☁️ Deployment
 You can deploy this app using Docker, Render, Heroku, or any service that supports FastAPI + Python 3.
 
-📄 License
+# 📄 License
 MIT (or your chosen license)
 
-✨ Credits
+# ✨ Credits
 Built by [Your Name]
 
-Data: UCI Bank Marketing dataset
+## Data: UCI Bank Marketing dataset
