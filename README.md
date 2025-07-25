@@ -1,6 +1,6 @@
 # Bank Marketing Prediction API
 
-An easy-to-use REST API to predict whether a customer will subscribe to a term deposit, based on the UCI Bank Marketing dataset and a trained Random Forest model. Powered by FastAPI. This the week 2 project of my MLOps plan.
+An easy-to-use REST API to predict whether a customer will subscribe to a term deposit, based on the UCI Bank Marketing dataset and a trained Random Forest model. Powered by FastAPI.
 
 # 🚀 Features
 /predict endpoint for model predictions
@@ -13,18 +13,14 @@ Interactive API docs (/docs)
 
 Ready for local or cloud deployment
 
-## 🗂️ Project Structure 
-├── main.py # FastAPI app and inference logic 
-├── ranforclas_model.pkl # Trained Random Forest model file 
-├── requirements.txt # Python dependencies 
-└── README.md # This documentation
-
 # ⚡ Quickstart
 Clone this repo and move into the directory:
 
-git clone <your-repo-url>
+*create a folder*
 cd <your-project-folder>
-(Recommended) Create a virtual environment:
+git clone https://github.com/Shanecode3/bank-marketing-fastapi
+
+## (Recommended) Create a virtual environment:
 
 python -m venv venv
 source venv/bin/activate      # Linux/macOS
@@ -101,9 +97,9 @@ duration feature not used
 You can deploy this app using Docker, Render, Heroku, or any service that supports FastAPI + Python 3.
 
 # 📄 License
-MIT (or your chosen license)
+https://github.com/Shanecode3/bank-marketing-fastapi/blob/main/LICENSE
 
 # ✨ Credits
-Built by [Your Name]
+Built by Shanecode3
 
 ## Data: UCI Bank Marketing dataset
