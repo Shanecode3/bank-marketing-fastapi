@@ -13,13 +13,11 @@ Interactive API docs (/docs)
 
 Ready for local or cloud deployment
 
-# 🗂️ Project Structure
-
-.
-├── main.py               # FastAPI app and inference logic
-├── ranforclas_model.pkl  # Trained Random Forest model file
-├── requirements.txt      # Python dependencies
-└── README.md             # This documentation
+## 🗂️ Project Structure 
+├── main.py # FastAPI app and inference logic 
+├── ranforclas_model.pkl # Trained Random Forest model file 
+├── requirements.txt # Python dependencies 
+└── README.md # This documentation
 
 # ⚡ Quickstart
 Clone this repo and move into the directory:
