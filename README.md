@@ -258,7 +258,7 @@ Inspiration: MLOps best practices
 
 ### MIT License --- use freely with credit.
 
-👤 Author
+### 👤 Author
 
 [Shane Jacob]
 
