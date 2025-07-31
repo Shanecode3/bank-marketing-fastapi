@@ -1,12 +1,22 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 import numpy as np
+
 
 app = FastAPI(
     title="Bank Marketing Prediction API",
     description="API to predict term deposit subscription using a Random Forest model trained on the UCI Bank Marketing dataset.",
     version="1.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Load the pre-trained Random Forest model

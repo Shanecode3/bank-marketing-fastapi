@@ -1,105 +1,331 @@
-# Bank Marketing Prediction API
+# 🏦 Bank Marketing API (ML-Powered)
 
-An easy-to-use REST API to predict whether a customer will subscribe to a term deposit, based on the UCI Bank Marketing dataset and a trained Random Forest model. Powered by FastAPI.
+An end-to-end Machine Learning API built using **FastAPI** that predicts whether a client will subscribe to a term deposit based on the Bank Marketing dataset from UCI Machine Learning Repository.
 
-# 🚀 Features
-/predict endpoint for model predictions
+This project is part of my MLOps journey and demonstrates data preprocessing, model training, API creation, and containerization using **Docker**.
 
-Input validation using Pydantic
+---
 
-Outputs prediction class and probabilities
+## 📊 Dataset
 
-Interactive API docs (/docs)
+- **Source:** [UCI Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 
-Ready for local or cloud deployment
+- **Goal:** Predict the `"y"` column --- whether a client subscribed to a term deposit.
 
-# ⚡ Quickstart
-Clone this repo and move into the directory:
+- **Format:** Tabular data with features like age, job, marital status, education, contact, and campaign details.
 
-*create a folder*
-cd <your-project-folder>
-git clone https://github.com/Shanecode3/bank-marketing-fastapi
+---
 
-## (Recommended) Create a virtual environment:
+## 🚀 Features
+
+- 🧹 Cleaned and preprocessed dataset using pandas
+
+- 🔍 Performed EDA and feature engineering
+
+- 🤖 Trained a classification model using **scikit-learn**
+
+- 🧪 Saved the trained model as a `.pkl` file
+
+- 🌐 Served via a **FastAPI** backend
+
+- 🐳 Containerized with **Docker** for easy deployment
+
+- 📦 Exposes a REST API for predictions
+
+---
+
+## 🛠️ Tech Stack
+
+- Python 3.11
+
+- pandas, scikit-learn, joblib
+
+- FastAPI, Uvicorn
+
+- Docker
+
+---
+
+## 📁 Project Structure
+
+bank-marketing-api/
+
+├── api/
+
+│ ├── main.py # FastAPI app
+
+│ └── model.pkl # Trained ML model
+
+├── data/
+
+│ └── bank.csv # Original dataset
+
+├── notebooks/
+
+│ └── EDA_Modeling.ipynb # Data cleaning, training
+
+├── requirements.txt
+
+├── Dockerfile
+
+├── .dockerignore
+
+└── README.md# 🧠 Bank Marketing Predictor (Full Stack ML App)
+
+A full-stack machine learning web app that predicts whether a bank client will subscribe to a term deposit.
+
+This portfolio-ready project includes:
+
+- 📊 Trained ML model from UCI Bank Marketing Dataset
+
+- ⚙️ REST API using FastAPI
+
+- 💻 React + Tailwind CSS frontend
+
+- 🐳 Dockerized backend
+
+- 🧪 Realtime prediction system with clean UI
+
+---
+
+## 🧰 Tech Stack
+
+| Layer     | Tools                                      |
+
+|-----------|---------------------------------------------|
+
+| Frontend  | React, Tailwind CSS, Fetch API              |
+
+| Backend   | FastAPI, scikit-learn, joblib, Uvicorn      |
+
+| ML Model  | Logistic Regression / Random Forest         |
+
+| DevOps    | Docker                                      |
+
+---
+
+## 🏁 Features
+
+- Trained on the [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+
+- FastAPI endpoint `/predict` accepts JSON input
+
+- Saved `.pkl` model with joblib
+
+- Clean, animated React frontend with Tailwind
+
+- Fully containerized backend for easy deployment
+
+- Realtime prediction display on frontend
+
+---
+
+## 📁 Project Structure
+
+bank-marketing-app/
+
+├── backend/
+
+│ ├── api/
+
+│ │ └── main.py # FastAPI app with /predict
+
+│ ├── model/
+
+│ │ └── model.pkl # Trained ML model
+
+│ ├── data/
+
+│ │ └── bank.csv # Original dataset
+
+│ ├── requirements.txt
+
+│ └── Dockerfile
+
+├── frontend/
+
+│ ├── public/
+
+│ ├── src/
+
+│ │ ├── App.jsx # React entry
+
+│ │ ├── components/ # Input form, output box
+
+│ │ └── index.css # Tailwind styles
+
+│ ├── tailwind.config.js
+
+│ └── package.json
+
+└── README.md
+
+---
+
+## ⚙️ Setup Instructions
+
+### 🔹 Backend (FastAPI)
+
+1\. Create and activate virtual env:
+
+cd backend
 
 python -m venv venv
-source venv/bin/activate      # Linux/macOS
-# OR
-venv\Scripts\activate.bat     # Windows
+
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
 Install dependencies:
 
 pip install -r requirements.txt
-Ensure your trained model file ranforclas_model.pkl is present in the root directory.
 
-Run the FastAPI app:
+Run the API server:
 
-uvicorn main:app --reload
-Test in your browser:
+uvicorn api.main:app --reload
 
-API docs: http://127.0.0.1:8000/docs
+Visit: http://localhost:8000/docs
 
-Health check: http://127.0.0.1:8000/
+🔹 Frontend (React + Tailwind)
 
-# 🧑‍💻 Example Input (for /predict endpoint)
+Install dependencies:
 
-{
-  "age": 40,
-  "job": "management",
-  "marital": "married",
-  "education": "tertiary",
-  "default": "no",
-  "balance": 1500.0,
-  "housing": "yes",
-  "loan": "no",
-  "contact": "cellular",
-  "day": 15,
-  "month": "may",
-  "campaign": 2,
-  "pdays": -1,
-  "previous": 0,
-  "poutcome": "unknown"
-}
+cd frontend
 
-# 🟢 Example Output
+npm install
+
+Run development server:
+
+npm run dev
+
+App runs at: http://localhost:5173
+
+Ensure the backend is running at port 8000 for frontend to connect properly.
+
+🧪 API Reference
+
+POST /predict
+
+🔸 Sample Input
 
 {
-  "prediction": 0,
-  "probability": [0.94, 0.06]
+
+  "age": 45,
+
+  "job": "management",
+
+  "marital": "married",
+
+  "education": "tertiary",
+
+  "default": "no",
+
+  "balance": 3500,
+
+  "housing": "yes",
+
+  "loan": "no",
+
+  "contact": "cellular",
+
+  "day": 18,
+
+  "month": "may",
+
+  "duration": 180,
+
+  "campaign": 2,
+
+  "pdays": -1,
+
+  "previous": 0,
+
+  "poutcome": "unknown"
+
 }
-prediction: 1 = likely to subscribe, 0 = not likely.
 
-probability: Confidence scores for both classes.
+🔸 Sample Response
 
-# 📦 API Endpoints
-GET / — Health check
+{
 
-POST /predict — Submit customer data to get a prediction
+  "prediction": "yes"
 
-GET /features — Model's expected feature columns
+}
 
-# ⚠️ Input Feature Notes
-Categorical fields must match model categories (see /features endpoint).
+🐳 Docker Deployment (Backend)
 
-Example jobs: "management", "technician", "services", etc.
+Build Docker image:
 
-Example months: "may", "jul", "nov", etc.
+cd backend
 
-# 📝 Training & Model Info
-Model: RandomForestClassifier (scikit-learn)
+docker build -t bank-marketing-api .
 
-Data: UCI Bank Marketing Dataset
+Run Docker container:
 
-One-hot encoding for categorical variables
+docker run -p 8000:8000 bank-marketing-api
 
-duration feature not used
+Then hit: http://localhost:8000/docs
 
-# ☁️ Deployment
-You can deploy this app using Docker, Render, Heroku, or any service that supports FastAPI + Python 3.
+🧠 Model Training Summary
 
-# 📄 License
-https://github.com/Shanecode3/bank-marketing-fastapi/blob/main/LICENSE
+Preprocessed with pandas (label encoding, missing handling)
 
-# ✨ Credits
-Built by Shanecode3
+Trained with Logistic Regression and Random Forest
 
-## Data: UCI Bank Marketing dataset
+Model saved as model.pkl using joblib
+
+Evaluation metrics: accuracy, precision, recall
+
+💡 App Flow
+
+User opens frontend and fills form.
+
+Data is sent as JSON to FastAPI backend.
+
+Backend loads model and predicts outcome.
+
+Result (yes or no) is displayed in the UI.
+
+🧼 Future Enhancements
+
+✨ Add form validation and loading states
+
+📊 Add SHAP/feature importance explainability
+
+☁️ Deploy backend (Render, Railway)
+
+💻 Deploy frontend (Vercel/Netlify)
+
+🧪 Add tests and CI/CD pipeline
+
+📈 Log user inputs for feedback loop
+
+📸 Screenshot
+
+Prediction UI
+
+(Add screenshot here)
+
+🙏 Acknowledgements
+
+UCI Machine Learning Repository
+
+FastAPI & scikit-learn
+
+React and TailwindCSS teams
+
+Inspiration: MLOps best practices
+
+📄 License
+
+MIT License --- use freely with credit.
+
+👤 Author
+
+[Your Name]
+
+Third-year CSE @ Saintgits
+
+🇨🇦 Canadian Citizen
+
+📧 your.email@example.com
+
+🔗 LinkedIn
