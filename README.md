@@ -245,6 +245,11 @@ Prediction UI
 <img width="1919" height="929" alt="image" src="https://github.com/user-attachments/assets/8b3096a2-8a2c-403b-85ba-7c5acfaa62c0" />
 
 
+### 🌐 Live Demo
+
+- 🔮 **Frontend:** [bank-marketing-fastapi.vercel.app](https://bank-marketing-fastapi.vercel.app)
+- ⚙️ **Backend API:** [bank-api-1tuf.onrender.com](https://bank-api-1tuf.onrender.com/docs)
+
 ### 🙏 Acknowledgements
 
 UCI Machine Learning Repository
