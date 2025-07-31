@@ -1,6 +1,6 @@
 # 🏦 Bank Marketing API (ML-Powered)
 
-An end-to-end Machine Learning API built using **FastAPI** that predicts whether a client will subscribe to a term deposit based on the Bank Marketing dataset from UCI Machine Learning Repository.
+An end-to-end Machine Learning API and a full-stack machine learning web app that predicts whether a bank client will subscribe to a term deposit, built using **FastAPI** that predicts whether a client will subscribe to a term deposit based on the Bank Marketing dataset from UCI Machine Learning Repository.
 
 This project is part of my MLOps journey and demonstrates data preprocessing, model training, API creation, and containerization using **Docker**.
 
@@ -13,66 +13,6 @@ This project is part of my MLOps journey and demonstrates data preprocessing, mo
 - **Goal:** Predict the `"y"` column --- whether a client subscribed to a term deposit.
 
 - **Format:** Tabular data with features like age, job, marital status, education, contact, and campaign details.
-
----
-
-## 🚀 Features
-
-- 🧹 Cleaned and preprocessed dataset using pandas
-
-- 🔍 Performed EDA and feature engineering
-
-- 🤖 Trained a classification model using **scikit-learn**
-
-- 🧪 Saved the trained model as a `.pkl` file
-
-- 🌐 Served via a **FastAPI** backend
-
-- 🐳 Containerized with **Docker** for easy deployment
-
-- 📦 Exposes a REST API for predictions
-
----
-
-## 🛠️ Tech Stack
-
-- Python 3.11
-
-- pandas, scikit-learn, joblib
-
-- FastAPI, Uvicorn
-
-- Docker
-
----
-
-## 📁 Project Structure
-
-bank-marketing-api/
-
-├── api/
-
-│ ├── main.py # FastAPI app
-
-│ └── model.pkl # Trained ML model
-
-├── data/
-
-│ └── bank.csv # Original dataset
-
-├── notebooks/
-
-│ └── EDA_Modeling.ipynb # Data cleaning, training
-
-├── requirements.txt
-
-├── Dockerfile
-
-├── .dockerignore
-
-└── README.md# 🧠 Bank Marketing Predictor (Full Stack ML App)
-
-A full-stack machine learning web app that predicts whether a bank client will subscribe to a term deposit.
 
 This portfolio-ready project includes:
 
@@ -184,7 +124,7 @@ uvicorn api.main:app --reload
 
 Visit: http://localhost:8000/docs
 
-🔹 Frontend (React + Tailwind)
+### 🔹 Frontend (React + Tailwind)
 
 Install dependencies:
 
@@ -200,11 +140,11 @@ App runs at: http://localhost:5173
 
 Ensure the backend is running at port 8000 for frontend to connect properly.
 
-🧪 API Reference
+### 🧪 API Reference
 
 POST /predict
 
-🔸 Sample Input
+### 🔸 Sample Input
 
 {
 
@@ -242,7 +182,7 @@ POST /predict
 
 }
 
-🔸 Sample Response
+### 🔸 Sample Response
 
 {
 
@@ -250,7 +190,7 @@ POST /predict
 
 }
 
-🐳 Docker Deployment (Backend)
+### 🐳 Docker Deployment (Backend)
 
 Build Docker image:
 
@@ -264,7 +204,7 @@ docker run -p 8000:8000 bank-marketing-api
 
 Then hit: http://localhost:8000/docs
 
-🧠 Model Training Summary
+### 🧠 Model Training Summary
 
 Preprocessed with pandas (label encoding, missing handling)
 
@@ -274,7 +214,7 @@ Model saved as model.pkl using joblib
 
 Evaluation metrics: accuracy, precision, recall
 
-💡 App Flow
+### 💡 App Flow
 
 User opens frontend and fills form.
 
@@ -284,7 +224,7 @@ Backend loads model and predicts outcome.
 
 Result (yes or no) is displayed in the UI.
 
-🧼 Future Enhancements
+### 🧼 Future Enhancements
 
 ✨ Add form validation and loading states
 
@@ -298,13 +238,13 @@ Result (yes or no) is displayed in the UI.
 
 📈 Log user inputs for feedback loop
 
-📸 Screenshot
+### 📸 Screenshot
 
 Prediction UI
 
 (Add screenshot here)
 
-🙏 Acknowledgements
+### 🙏 Acknowledgements
 
 UCI Machine Learning Repository
 
@@ -314,18 +254,18 @@ React and TailwindCSS teams
 
 Inspiration: MLOps best practices
 
-📄 License
+### 📄 License
 
-MIT License --- use freely with credit.
+### MIT License --- use freely with credit.
 
 👤 Author
 
-[Your Name]
+[Shane Jacob]
 
-Third-year CSE @ Saintgits
+Third-year CSE @ Saintgits College of Engineering
 
 🇨🇦 Canadian Citizen
 
-📧 your.email@example.com
+📧 shanechristian2003@gmail
 
-🔗 LinkedIn
+🔗 https://www.linkedin.com/in/shane-jacob-aa13b5290
