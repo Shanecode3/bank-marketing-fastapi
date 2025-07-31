@@ -242,7 +242,8 @@ Result (yes or no) is displayed in the UI.
 
 Prediction UI
 
-(Add screenshot here)
+<img width="1919" height="929" alt="image" src="https://github.com/user-attachments/assets/8b3096a2-8a2c-403b-85ba-7c5acfaa62c0" />
+
 
 ### 🙏 Acknowledgements
 
