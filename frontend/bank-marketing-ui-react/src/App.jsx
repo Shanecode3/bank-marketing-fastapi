@@ -86,7 +86,7 @@ function App() {
           Bank Marketing Predictor
         </h1>
         <form className="space-y-4" onSubmit={handleSubmit} autoComplete="off">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4"">
             <div>
               <label className="font-medium">Age</label>
               <input name="age" type="number" min={18} max={100} className="input text-white bg-blue-500 rounded-md absolute left-16 text-center" value={inputs.age} onChange={handleChange} required />
